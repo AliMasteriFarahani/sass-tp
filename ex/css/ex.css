@@ -1,0 +1,40 @@
+p {
+  font-size: 2rem;
+}
+
+.p1 {
+  background-color: red;
+}
+
+.p2 {
+  background-color: yellow;
+}
+
+.p11 {
+  background-color: yellowgreen;
+}
+
+.p12 {
+  background-color: yellow;
+}
+
+p.p0 {
+  font-size: 3rem;
+  opacity: .6;
+}
+
+p.p0 {
+  transition: color 1s, background-color 1s;
+  -webkit-transition: color 1s, background-color 1s;
+  -moz-transition: color 1s, background-color 1s;
+  -ms-transition: color 1s, background-color 1s;
+  -o-transition: color 1s, background-color 1s;
+  font-size: 2rem;
+  color: red;
+}
+
+.p0:hover {
+  color: yellow;
+  background-color: blueviolet;
+}
+/*# sourceMappingURL=ex.css.map */

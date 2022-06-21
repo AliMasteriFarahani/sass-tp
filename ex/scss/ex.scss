@@ -1,0 +1,51 @@
+@import 'test';
+$color-primary: red;
+$c :'color';
+
+$colors : (1:red,2:yellow);
+$colors2 : green blue;
+
+@for $i from 1 through 2{
+   .p#{$i}{
+       background-color: map-get($map: $colors, $key: $i);
+   }
+}
+
+@each $i,$color in $colors{
+    .p1#{$i}{
+        @if($color == red) {
+            
+            background-color: yellowgreen;
+        }@else{
+            
+            background-color: $color;
+        }
+    }
+}
+
+@function doubleFontSize($size:2rem){
+    @return $size * 2;
+}
+
+@mixin transition($params...) {
+    transition: $params;
+    -webkit-transition: $params;
+    -moz-transition: $params;
+    -ms-transition: $params;
+    -o-transition: $params;
+}
+%heading{
+    font-size: 3rem;
+    opacity: .6;
+}
+p.p0 {
+    @include transition(color 1s,background-color 1s);
+    @extend %heading;
+    $fff:'cccc' !global;
+    font-size: doubleFontSize(1rem);
+    #{$c}: $color-primary;
+}
+.p0:hover {
+    color: yellow;
+    background-color: blueviolet;
+}

@@ -1,0 +1,48 @@
+p {
+  font-size: 2rem;
+}
+
+h1 {
+  color: blue;
+}
+
+body {
+  background-color: orange;
+}
+
+nav ul {
+  list-style: none;
+}
+
+nav li {
+  font-size: 30px;
+}
+
+nav a {
+  transition: color 1s, background-color 1s;
+  -webkit-transition: color 1s, background-color 1s;
+  -moz-transition: color 1s, background-color 1s;
+  -ms-transition: color 1s, background-color 1s;
+  -o-transition: color 1s, background-color 1s;
+  background-color: transparent;
+  color: lightblue;
+}
+
+nav a:hover {
+  color: blue;
+  background-color: turquoise;
+}
+
+.p1 {
+  font-size: 30px;
+  background-color: wheat;
+}
+
+.p1 {
+  color: blue;
+}
+
+.p2 {
+  font-size: 32px;
+}
+/*# sourceMappingURL=main.css.map */

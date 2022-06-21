@@ -1,0 +1,60 @@
+p {
+    font-size: 2em;
+}
+@function doubleFontSize($param:16px){
+    @return $colors.1;
+}
+$colors: (
+    1: red,
+    2: green,
+    3: yellow,
+    4: gray,
+    5: blue,
+);
+
+$colors2: red green yellow gray blue;
+
+// @for $i from 1 to 5 {
+//     .paragraph-#{$i}{
+//         background-color: map-get($map: $colors, $key: $i);
+//     }
+// }
+// @for $i from 1 through 5 {
+//     .paragraph-#{$i} {
+//         background-color: map-get($map: $colors, $key: $i);
+//     }
+// }
+.ssr p:nth-child(1){
+    color: red !important;
+}
+@for $i from 1 through 5 {
+    .rr p:nth-child(1){
+        color: red !important;
+    }
+    .paragraph-#{$i} {
+        background-color: doubleFontSize();
+    }
+}
+
+@each $color in $colors2 {
+    .paragraph-#{$color} {
+        @if ($color == green) {
+            background-color: thistle;
+        } @else if($color == red) {
+            background-color: pink;
+        } @else {
+            background-color: $color;
+        }
+    }
+}
+@each $color in $colors2 {
+    .paragraph-#{$color} {
+        @if ($color == green) {
+            background-color: thistle;
+        } @else if($color == red) {
+            background-color: pink;
+        } @else {
+            background-color: $color;
+        }
+    }
+}

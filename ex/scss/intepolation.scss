@@ -1,0 +1,6 @@
+$c:'color';
+$b:'border';
+
+h1{
+    #{$b}-radius: 1px solid #eee;
+}

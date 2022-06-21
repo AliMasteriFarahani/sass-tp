@@ -1,0 +1,9 @@
+{
+    "version": 3,
+    "mappings": "AAGA,AAAA,EAAE,CAAA;EACE,aAAY,EAAS,cAAc;CACtC",
+    "sources": [
+        "../ex/scss/intepolation.scss"
+    ],
+    "names": [],
+    "file": "intepolation.css"
+}

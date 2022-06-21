@@ -1,0 +1,61 @@
+@import "test";
+$color-primary:orange;
+$color-secondry:blue;
+$color-traty:lightblue;
+
+$font-size-lg:40px;
+$font-size-md:30px;
+$font-size-sm:20px;
+$colors:(
+    primary:orange,
+    secondry:blue
+);
+h1 {
+    color: map-get($map: $colors, $key:secondry );
+}
+@function doubleFontSize($param:16px){
+    @return $param *2;
+}
+@mixin transition($params...) {
+    transition: $params;
+    -webkit-transition: $params;
+    -moz-transition: $params;
+    -ms-transition: $params;
+    -o-transition: $params;
+}
+
+body{
+    background-color: $color-primary;
+}
+nav{
+    ul{
+        list-style: none;
+    }
+    li{
+        font-size: 30px;
+    }
+    a{
+        @include transition(color 1s,background-color 1s);
+        background-color:transparent;
+        color: $color-traty;
+        &:hover{
+            color: $color-secondry;
+            background-color: turquoise;
+        }
+    }
+
+}
+%heading{
+    font-size: 30px;
+    background-color: wheat;
+}
+.p1{
+    //$color-test:red !global;
+     @extend %heading;
+    color: $color-secondry;
+}
+.p2{
+    // color: $color-test;
+    font-size: doubleFontSize();
+    // font-size: doubleFontSize(20px);
+}

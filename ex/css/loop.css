@@ -1,0 +1,44 @@
+p {
+  font-size: 2em;
+}
+
+.paragraph-1 {
+  background-color: red;
+}
+
+.paragraph-2 {
+  background-color: green;
+}
+
+.paragraph-3 {
+  background-color: yellow;
+}
+
+.paragraph-4 {
+  background-color: gray;
+}
+
+.paragraph-5 {
+  background-color: blue;
+}
+
+.paragraph-red {
+  background-color: pink;
+}
+
+.paragraph-green {
+  background-color: thistle;
+}
+
+.paragraph-yellow {
+  background-color: yellow;
+}
+
+.paragraph-gray {
+  background-color: gray;
+}
+
+.paragraph-blue {
+  background-color: blue;
+}
+/*# sourceMappingURL=loop.css.map */
